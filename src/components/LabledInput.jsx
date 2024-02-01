@@ -3,9 +3,7 @@ import React from "react";
 const LabeledInput = ({ label, type, name, value, onChange, required }) => {
   return (
     <>
-      <label className="block text-sm font-medium text-gray-600">
-        {label}
-      </label>
+      <label className="block text-sm font-medium text-gray-600">{label}</label>
       <input
         type={type}
         name={name}
