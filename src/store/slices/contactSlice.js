@@ -1,11 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-export const contactSlice = createSlice({
-  name: 'contacts',
-  initialState: [],
+const contactSlice = createSlice({
+  name: "contacts",
+  initialState: [
+      {
+          "name": "Test Name",
+          "phone": "0123456789",
+          "email": "test@gmail.com"
+      }
+  ],
   reducers: {
     addContact: (state, action) => {
-      //Will Implement add logic
+      state.push(action.payload);
     },
     editContact: (state, action) => {
       //Will Implement editing logic
