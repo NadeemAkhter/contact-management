@@ -5,7 +5,7 @@ const Button = ({
   text = "Click",
   btnType = "button",
   onClick,
-  height = "h-12",
+  className = "h-12",
 }) => {
   const getTypeClass = () => {
     switch (type) {
@@ -20,7 +20,7 @@ const Button = ({
     }
   };
 
-  const buttonClass = `${height} px-5 py-1 mx-1 inline-block rounded-md transition duration-300 focus:outline-none ${getTypeClass()}`;
+  const buttonClass = `${className} px-5 py-1 mx-1 inline-block rounded-md transition duration-300 focus:outline-none ${getTypeClass()}`;
 
   return (
     <button type={btnType} className={buttonClass} onClick={onClick}>

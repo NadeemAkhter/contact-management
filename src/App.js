@@ -4,7 +4,7 @@ import ContactList from "./components/ContactList";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [hasId, setId] = useState(null);
+  const [hasId, setId] = useState(null); // For edit contact, form will be auto fill if Id is available.
 
   const openModal = (id) => {
     id !== null ? setId(id) : setId(null);

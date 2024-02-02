@@ -40,8 +40,8 @@ const ContactList = ({ openModal }) => {
         <h1 className="text-2xl font-bold text-gray-600">Contacts List</h1>
         <div className="flex items-center">
           <Button
-            height={"h-auto sm:h-10"}
-            text={"Add Contact"}
+            className="h-auto sm:h-10"
+            text="Add Contact"
             onClick={() => openModal(null)}
           />
         </div>
@@ -49,15 +49,15 @@ const ContactList = ({ openModal }) => {
       <div className="flex items-center">
         <input
           type="text"
-          placeholder="Search by name"
+          placeholder="Search contacts by name "
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="p-2 border rounded-md mr-2 w-full"
         />
         <Button
-          text="Sort"
+          text="Sort &#8645;"
           type="secondary"
-          height="h-12"
+          className="h-10 min-w-24"
           onClick={handleSort}
         />
       </div>
@@ -78,13 +78,13 @@ const ContactList = ({ openModal }) => {
             <p className="text-blue-500">{contact.email}</p>
             <div className="flex justify-end">
               <Button
-                height="h-8"
+                className="h-8"
                 type="secondary"
                 text="edit"
                 onClick={() => handleEdit(contact.id)}
               />
               <Button
-                height="h-8"
+                className="h-8"
                 type="warning"
                 text="delete"
                 onClick={() => handleDelete(contact.id)}
