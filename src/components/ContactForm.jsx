@@ -7,6 +7,7 @@ import {
 } from "../store/slices/contactSlice";
 import Button from "./Button";
 import LabeledInput from "./LabledInput";
+import Modal from "./Modal";
 
 const ContactForm = ({ isOpen, onClose, hasId }) => {
   const dispatch = useDispatch();
@@ -61,14 +62,10 @@ const ContactForm = ({ isOpen, onClose, hasId }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-      <div
-        className="absolute inset-0 bg-black text-white opacity-75"
-        onClick={onClose}
-      ></div>
+    <Modal onClose={onClose}>
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-xl mx-2 lg:mx-auto p-4 bg-white shadow-md rounded-md z-10"
+        className="w-full max-w-xl mx-2 lg:mx-auto p-4 bg-white shadow-md rounded-md"
       >
         <div className="flex justify-between py-4 mb-2">
           <h2 className="text-gray-700 text-xl">Enter Contact Details</h2>
@@ -114,7 +111,7 @@ const ContactForm = ({ isOpen, onClose, hasId }) => {
 
         <Button btnType="submit" text={hasId ? "Update" : "Add"} />
       </form>
-    </div>
+    </Modal>
   );
 };
 

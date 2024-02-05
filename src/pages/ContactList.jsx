@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteContact, listContacts } from "../store/slices/contactSlice";
-import Button from "./Button";
+import Button from "../components/Button";
 
 const ContactList = ({ openModal }) => {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ContactForm from "./components/ContactForm";
-import ContactList from "./components/ContactList";
+import ContactList from "./pages/ContactList";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
